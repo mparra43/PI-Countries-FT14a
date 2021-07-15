@@ -5,7 +5,7 @@ const Activity = require('../models/Activity')
 const activity = async (req, res = response) => {
     const {name, complexity, term, season} = req.body;
     try {
-        let newActivity = await Activity.findOne({ where: { name } });
+        let newActivity = await Activity.findOne({where: {name}});
         if (newActivity === null) {
             let newActivity = await Activity.create({
                 name,
@@ -14,13 +14,24 @@ const activity = async (req, res = response) => {
                 season,
             });
             return res.status(201).json({msg: "activity created successfully"});
-        }else {
-            return res.status(400).json({msg:"this activity already exists"});
+        } else {
+            return res.status(400).json({msg: "this activity already exists"});
         }
 
-    } catch(e){
-        return res.status(500).json({msg:"error"})
+    } catch (e) {
+        return res.status(500).json({msg: "error"})
+    }
+
+}
+
+const activities = async (req, res = response) => {
+    try {
+        const Activities = await Activity.findAll();
+        return res.status(201).json(Activities);
+    } catch (e) {
+        return res.status(500).json({msg: "error"})
     }
 
 }
 module.exports = activity;
+

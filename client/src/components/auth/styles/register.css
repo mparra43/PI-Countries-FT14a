@@ -1,0 +1,32 @@
+
+.login-container {
+    margin: 300px;
+}
+.login-form-2{
+    border-radius: 15px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    padding: 5%;
+    background: #010530;
+}
+.login-form-2 h3 {
+    text-align: center;
+    color: #fff;
+    font-style: initial;
+}
+
+.login-form-2 .btnSubmit{
+    background-color: #fff;
+    color: #010530;
+}
+.login-form-2 input {
+    border-radius: 5px;
+}
+.login-form-2 .btnSubmit {
+    background-color: #fff;
+    color: #010530;
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}

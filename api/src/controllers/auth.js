@@ -27,7 +27,7 @@ const createUser = async (req, res = response) => {
            return res.status(400).json({msg:"this user already exists"});
         }
 
-    } catch(e){
+    } catch(error){
         return res.status(500).json({msg:"error"})
     }
 
@@ -51,10 +51,10 @@ const loginUser = async (req, res = response) => {
         return res.status(500).json({msg:"error"})
     }
 }
-const validateToken = (req, res = response) => {
-    res.json({
-        msg: 'validateToken'
-    })
+const validateToken = async (req, res = response) => {
+    const { id, name}  = req;
+    const  token = await generateJWT(id, name);
+    res.json ({ token });
 }
  module.exports = {
      createUser,
