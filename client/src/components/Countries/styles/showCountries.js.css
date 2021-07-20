@@ -1,0 +1,15 @@
+.flag {
+    width: 100px;
+    height: 40px;
+}
+
+
+.card {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.card h3{
+    align-items: center;
+
+}

@@ -3,7 +3,7 @@ const {response} = require('express');
 const Activity = require('../models/Activity')
 
 const activity = async (req, res = response) => {
-    const {name, complexity, term, season} = req.body;
+    const {name, complexity, term, season, country,} = req.body;
     try {
         let newActivity = await Activity.findOne({where: {name}});
         if (newActivity === null) {
@@ -12,6 +12,7 @@ const activity = async (req, res = response) => {
                 complexity,
                 term,
                 season,
+                country,
             });
             return res.status(201).json({msg: "activity created successfully"});
         } else {

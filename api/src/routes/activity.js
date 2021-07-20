@@ -1,7 +1,7 @@
 /* rutas del actividaes*/
 const {Router} = require('express');
-const {check}= require('express-validator');
-const {validateInput}= require('../middlewares/validateInput')
+const {check} = require('express-validator');
+const {validateInput} = require('../middlewares/validateInput')
 const activity = require('../controllers/activity');
 const router = Router();
 
@@ -12,6 +12,7 @@ router.post('/activity',
         check('complexity', 'la ').isLength({max: 1}),
         check('term', 'Este campo es obligatoria').not().isEmpty(),
         check('season', 'Este campo es obligatoria').not().isEmpty(),
+        check('country', 'Este campo es obligatoria').not().isEmpty(),
         validateInput
     ],
     activity);

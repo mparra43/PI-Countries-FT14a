@@ -22,13 +22,13 @@ const createUser = async (req, res = response) => {
             //generar JWT
           const token = await generateJWT(newUser.id, newUser.name);
 
-          return res.status(201).json({msg:"your user has been created successfully", token});
+          return res.status(201).json({ok:true, msg:"your user has been created successfully", token});
         } else {
-           return res.status(400).json({msg:"this user already exists"});
+           return res.status(400).json({ok:false,msg:"this user already exists"});
         }
 
     } catch(error){
-        return res.status(500).json({msg:"error"})
+        return res.status(500).json({ok:false,msg:"error"})
     }
 
 }
@@ -38,23 +38,23 @@ const loginUser = async (req, res = response) => {
         let logUser = await User.findOne({ where: { email } });
         if (logUser !== null) {
             const validPassword = bcryptjs.compareSync(password,logUser.password);
-            if(!validPassword ) return res.status(400).json({msg:"the password is incorrect"});
+            if(!validPassword ) return res.status(400).json({ok:false, msg:"the password is incorrect"});
             else {
                 const token = await generateJWT(logUser.id, logUser.name);
-                return res.status(200).json({msg:"bienvenido", token})
+                return res.status(200).json({ok:true, msg:"bienvenido",id:logUser.id, name:logUser.name, token})
             }
         } else {
-            return res.status(400).json({msg:"this user no  exists"});
+            return res.status(400).json({ok:false, msg:"this user no  exists"});
         }
 
     } catch(e){
-        return res.status(500).json({msg:"error"})
+        return res.status(500).json({ok:false,msg:"error"})
     }
 }
 const validateToken = async (req, res = response) => {
     const { id, name}  = req;
     const  token = await generateJWT(id, name);
-    res.json ({ token });
+    res.json ({ id:id, name:name, token });
 }
  module.exports = {
      createUser,

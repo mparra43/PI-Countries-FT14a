@@ -1,7 +1,17 @@
 const {response} = require('express');
 const {Country} = require('../models/Country');
-const {activities} = require('../models/Activity');
+
+
 const countriesAll = async (req, res = response) => {
+    try {
+        const { count, rows }  = await Country.findAndCountAll();
+        return res.status(201).json({data: rows});
+    } catch (error) {
+        return res.status(500).json({msg: "error"});
+    }
+}
+
+const countries = async (req, res = response) => {
     try {
         const { count, rows }  = await Country.findAndCountAll({
             offset: 10,
@@ -36,6 +46,7 @@ const countryName = async (req, res = response) => {
     }
 }
 module.exports = {
+    countries,
     countriesAll,
     countryId,
     countryName

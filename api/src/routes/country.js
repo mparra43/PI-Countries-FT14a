@@ -3,11 +3,11 @@ const {Router} = require('express');
 const {validateJwt }= require('../middlewares/validateJwt');
 const {check}= require('express-validator');
 const {validateInput}= require('../middlewares/validateInput');
-const { countriesAll, countryId, countryName}= require('../controllers/country');
+const { countries, countriesAll, countryId, countryName}= require('../controllers/country');
 const router = Router();
 
-
-router.get('/countries', validateJwt, countriesAll);
+router.get('/countries/all', validateJwt, countriesAll);
+router.get('/countries', validateJwt, countries);
 router.get('/countries/:id',[
 
         check('id', 'el id es obligatorio').isLength({min: 3}),
