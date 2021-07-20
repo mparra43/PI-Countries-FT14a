@@ -16,6 +16,8 @@ import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import {getCountries} from "../actions/countries";
 import {getAllCountries} from "../actions/countries";
+import{getAllActivities} from "../actions/activities";
+
 export const AppRouter = () => {
 
     const dispatch = useDispatch();
@@ -29,7 +31,8 @@ export const AppRouter = () => {
 
     if ( checking ) {
         dispatch(getCountries());
-        dispatch(getAllCountries())
+        dispatch(getAllCountries());
+        dispatch(getAllActivities());
         return (<h5>Espere...</h5>);
 
     }

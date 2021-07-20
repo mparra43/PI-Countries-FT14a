@@ -24,4 +24,5 @@ export const types = {
 
     getActivities: '[activities] get all activities',
     postActivities: '[activities] get all activities',
+    filterActivities: '[activities] filter activities',
 }

@@ -5,13 +5,13 @@ import './styles/showCountries.js.css';
 
 export const ShowCountries = () => {
 
-    const { countries} = useSelector(state => state.countries);
+    const {showCountries} = useSelector(state => state.countries);
 
-
+    console.log(showCountries)
     return (
 
         <div>
-            {countries.data.map((e) =>
+            {showCountries.data.map((e) =>
                 <div className="show">
                     <div className="card">
                         <Link to="/country" key={e.id}><h3>{e.name}</h3></Link>

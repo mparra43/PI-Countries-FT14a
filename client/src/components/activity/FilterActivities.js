@@ -1,5 +1,5 @@
 import React from 'react'
-import {filterCountries} from "../../actions/countries";
+import {filterActivities} from "../../actions/activities";
 import {useDispatch} from "react-redux";
 import './styles/filterActivities.css';
 
@@ -7,26 +7,30 @@ export const FilterActivities = () => {
 
     const dispatch = useDispatch();
 
-    const handleLeaks1 = () => dispatch(filterCountries("Africa"));
-    const handleLeaks2 = () => dispatch(filterCountries("Americas"));
-    const handleLeaks3 = () => dispatch(filterCountries("Asia"));
-    const handleLeaks4 = () => dispatch(filterCountries("Europe"));
-    const handleLeaks5 = () => dispatch(filterCountries("Oceania"));
+    const handleActivity1 = () => dispatch(filterActivities("Buceo"));
+    const handleActivity2 = () => dispatch(filterActivities("Flyboard"));
+    const handleActivity3 = () => dispatch(filterActivities("Jetski"));
+    const handleActivity4 = () => dispatch(filterActivities("Kayack"));
+    const handleActivity5 = () => dispatch(filterActivities("Snorkel"));
+    const handleActivity6 = () => dispatch(filterActivities("Surf"));
+    const handleActivity7 = () => dispatch(filterActivities("Trekking"));
+    const handleActivity8 = () => dispatch(filterActivities("Tour"));
+    const handleActivity9 = () => dispatch(filterActivities("Oceania"));
 
     return (
         <div>
             <div id="myBtnContainer">
                 <h3 className="title-a">Actividades</h3>
                 <hr/>
-                <button className="btn-a" onClick={handleLeaks4}>Buceo</button>
-                <button className="btn-a" onClick={handleLeaks3}>Fly Board</button>
-                <button className="btn-a" onClick={handleLeaks2}>Jet Ski</button>
-                <button className="btn-a" onClick={handleLeaks5}>kayack</button>
-                <button className="btn-a" onClick={handleLeaks1}>Snorkel</button>
-                <button className="btn-a" onClick={handleLeaks5}>surf</button>
-                <button className="btn-a" onClick={handleLeaks5}>Trekking</button>
-                <button className="btn-a" onClick={handleLeaks5}>Tour</button>
-                <button className="btn-add" onClick={handleLeaks5}>+</button>
+                <button className="btn-a" onClick={handleActivity1}>Buceo</button>
+                <button className="btn-a" onClick={handleActivity2}>FlyBoard</button>
+                <button className="btn-a" onClick={handleActivity3}>JetSki</button>
+                <button className="btn-a" onClick={handleActivity4}>kayack</button>
+                <button className="btn-a" onClick={handleActivity5}>Snorkel</button>
+                <button className="btn-a" onClick={handleActivity6}>surf</button>
+                <button className="btn-a" onClick={handleActivity7}>Trekking</button>
+                <button className="btn-a" onClick={handleActivity8}>Tour</button>
+                <button className="btn-a" onClick={handleActivity9}>+</button>
             </div>
         </div>
     )
