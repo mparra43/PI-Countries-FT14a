@@ -3,12 +3,13 @@ import {CgSearch} from 'react-icons/cg';
 import './styles/searchsBar.css';
 import {findCountry } from "../../actions/countries";
 import {useDispatch, useSelector} from "react-redux";
+import {Link} from "react-router-dom";
 
 export const SearchsBar = () => {
 
     const dispatch = useDispatch();
     const [nameCountry, setNameCountry] = useState( "" );
-    const {country} = useSelector(state=> state.countries)
+    const {coName} = useSelector(state=> state.countries)
 
     const handleSearchChange = (e) => {
         const  name =  e.target.value;
@@ -32,7 +33,7 @@ export const SearchsBar = () => {
                         value ={nameCountry}
                         onChange={handleSearchChange}
                     />
-                    <button type="submit"><i><CgSearch/></i></button>
+                    <button type="submit"><Link to={`/country/${coName.name}`}><CgSearch/></Link ></button>
                 </form>
             </div>
         </div>

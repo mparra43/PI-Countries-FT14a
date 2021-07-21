@@ -3,6 +3,7 @@ import { types } from '../types/types';
 const initialState = {
     allActivities: [],
     activitiesFilter:[],
+
 }
 
 export const activitiesReducer = ( state = initialState, action ) => {
@@ -23,7 +24,12 @@ export const activitiesReducer = ( state = initialState, action ) => {
                 ...state,
                 activitiesFilter: state.allActivities.data.filter(item => item.name === action.payload)
             }
-
+        case types.postActivities:
+             let array = {...state.allActivities}
+            return {
+                ...state,
+                allActivities: array.push(action.payload)
+            }
         default:
             return state;
     }

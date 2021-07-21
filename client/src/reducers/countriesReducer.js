@@ -2,7 +2,7 @@ import { types } from '../types/types';
 
 const initialState = {
     countries: [],
-    country: { },
+    coName: { },
     allCountries: [],
     countriesFilter: [],
     option: "",
@@ -18,13 +18,13 @@ export const countriesReducer = ( state = initialState, action ) => {
             return {
                 ...state,
                 countries:action.payload,
-                showCountries:action.payload,
             }
 
         case types.getCountriesAll:
             return {
                 ...state,
-                allCountries:action.payload
+                allCountries:action.payload,
+                showCountries:action.payload
             }
 
         case types.getCountriesId:
@@ -34,12 +34,15 @@ export const countriesReducer = ( state = initialState, action ) => {
             }
         case types.orderCountries:
             let array = {...state.allCountries};
+            console.log(array)
             if(action.payload === 'Orden alfabético'){
-                array.data.sort(function (a, b) {
+                state.showCountries.data.sort(function (a, b) {
                     if (a.name > b.name) return 1;
                     if (a.name < b.name) return -1;
                     return 0;
                 });
+                console.log(array);
+                console.log(array.data);
                 return {
                     ...state,
                     option: action.payload,
@@ -61,7 +64,7 @@ export const countriesReducer = ( state = initialState, action ) => {
             let findArray = {...state.allCountries}
             return {
                 ...state,
-                country: findArray.data.find(e=> e.name === action.payload)
+                coName: findArray.data.find(e=> e.name === action.payload)
             }
 
         case types.filterCountries:

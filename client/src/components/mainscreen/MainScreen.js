@@ -1,12 +1,11 @@
 import React from 'react';
-import{useSelector} from "react-redux";
 import {Navbar} from '../ui/Navbar';
 import {SearchsBar} from "../searchBar/SearchsBar";
-import {AddActivity} from "../activity/AddActivity";
 import {ShowCountries} from "../Countries/ShowCountries";
 import {FilterCountries} from "../Countries/FilterCountries";
 import {AllCountries} from "../Countries/AllCountries";
 import {FilterActivities} from "../activity/FilterActivities";
+import {ActivityModal} from "../activity/ActivityModal";
 
 export const MainScreen = () => {
     return (
@@ -25,8 +24,7 @@ export const MainScreen = () => {
                 <FilterActivities/>
             </div>
             <ShowCountries/>
-            <AddActivity/>
-
+            <ActivityModal/>
         </div>
     )
 }

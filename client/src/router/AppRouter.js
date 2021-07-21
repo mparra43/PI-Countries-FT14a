@@ -1,35 +1,38 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
     Redirect
-  } from 'react-router-dom';
-  
-import { useDispatch, useSelector } from 'react-redux';
+} from 'react-router-dom';
+
+import {useDispatch, useSelector} from 'react-redux';
 
 import {Home} from "../components/home/home";
-import { LoginScreen } from '../components/auth/LoginScreen';
-import { MainScreen } from '../components/mainScreen/MainScreen';
-import { Country } from '../components/Countries/country';
-import { startChecking } from '../actions/auth';
-import { PublicRoute } from './PublicRoute';
-import { PrivateRoute } from './PrivateRoute';
+import {LoginScreen} from '../components/auth/LoginScreen';
+import {MainScreen} from '../components/mainScreen/MainScreen';
+import {Country} from '../components/Countries/Country';
+import {CountryName} from '../components/Countries/CountryName';
+import {Continent} from "../components/Countries/Continente";
+import {Activity} from '../components/activity/Activity'
+import {startChecking} from '../actions/auth';
+import {PublicRoute} from './PublicRoute';
+import {PrivateRoute} from './PrivateRoute';
 import {getCountries} from "../actions/countries";
 import {getAllCountries} from "../actions/countries";
-import{getAllActivities} from "../actions/activities";
+import {getAllActivities} from "../actions/activities";
 
 export const AppRouter = () => {
 
     const dispatch = useDispatch();
-    const { checking, id } = useSelector( state => state.auth);
+    const {checking, id} = useSelector(state => state.auth);
 
     useEffect(() => {
-        
-        dispatch( startChecking() );
+
+        dispatch(startChecking());
 
     }, [dispatch])
 
-    if ( checking ) {
+    if (checking) {
         dispatch(getCountries());
         dispatch(getAllCountries());
         dispatch(getAllActivities());
@@ -42,35 +45,54 @@ export const AppRouter = () => {
             <div>
                 <Switch>
 
-                    <PublicRoute 
-                        exact 
-                        path="/login" 
-                        component={ LoginScreen }
-                        isAuthenticated={ !!id }
+                    <PublicRoute
+                        exact
+                        path="/login"
+                        component={LoginScreen}
+                        isAuthenticated={!!id}
                     />
                     <PublicRoute
                         exact
                         path="/home"
                         component={Home}
-                        isAuthenticated={ !!id }
-                    />
-
-                    <PrivateRoute 
-                        exact 
-                        path="/main"
-                        component={ MainScreen }
-                        isAuthenticated={ !!id }
+                        isAuthenticated={!!id}
                     />
 
                     <PrivateRoute
                         exact
-                        path="/country"
+                        path="/main"
+                        component={MainScreen}
+                        isAuthenticated={!!id}
+                    />
+
+                    <PrivateRoute
+                        exact
+                        path="/country/:id"
                         component={Country}
-                        isAuthenticated={ !!id }
+                        isAuthenticated={!!id}
+                    />
+                    <PrivateRoute
+                        exact
+                        path="/country/:name"
+                        component={CountryName}
+                        isAuthenticated={!!id}
+                    />
+
+                    <PrivateRoute
+                        exact
+                        path="/Activity"
+                        component={Activity}
+                        isAuthenticated={!!id}
+                    />
+                    <PrivateRoute
+                        exact
+                        path="/Continent"
+                        component={Continent}
+                        isAuthenticated={!!id}
                     />
 
 
-                    <Redirect to="/main" />
+                    <Redirect to="/main"/>
                 </Switch>
             </div>
         </Router>
