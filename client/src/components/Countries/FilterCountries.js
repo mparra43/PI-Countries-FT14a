@@ -17,13 +17,13 @@ export const FilterCountries = () => {
 
     return (
         <div>
-            <div id="myBtnContainer">
+            <div className="Continentes">
                 <h3 className="title">Continentes</h3>
-                <button className="btn active" onClick={handleLeaks1}><Link to="/Continent">África</Link></button>
-                <button className="btn" onClick={handleLeaks2}><Link to="/Continent">América</Link></button>
-                <button className="btn" onClick={handleLeaks3}><Link to="/Continent">Asia</Link></button>
-                <button className="btn" onClick={handleLeaks4}><Link to="/Continent">Europa</Link></button>
-                <button className="btn" onClick={handleLeaks5}><Link to="/Continent">Oceanía</Link></button>
+                <button className="btn active" onClick={handleLeaks1}><Link to="/Continent"><h4>África</h4></Link></button>
+                <button className="btn" onClick={handleLeaks2}><Link to="/Continent"><h4>América</h4></Link></button>
+                <button className="btn" onClick={handleLeaks3}><Link to="/Continent"><h4>Asia</h4></Link></button>
+                <button className="btn" onClick={handleLeaks4}><Link to="/Continent"><h4>Europa</h4></Link></button>
+                <button className="btn" onClick={handleLeaks5}><Link to="/Continent"><h4>Oceanía</h4></Link></button>
             </div>
         </div>
     )

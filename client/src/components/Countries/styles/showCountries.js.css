@@ -1,3 +1,16 @@
+.p-title{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.flag{
+    width:50px;
+    height:50px;
+    margin-left:20px;
+}
+hr{
+    margin-left: 20px;
+}
+
 .flag {
     width: 100px;
     height: 40px;

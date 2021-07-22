@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {orderCountries} from "../../actions/countries";
-import {useDispatch, useSelector} from "react-redux";
-
+import {useDispatch} from "react-redux";
+import './styles/allCountries.css';
 
 
 export const AllCountries = () => {
@@ -21,19 +21,17 @@ export const AllCountries = () => {
     }
 
     return (
-        <div>
-
+        <div className="ordenar">
             <form onSubmit={handleSubmitOrder} >
-                <label>Ordenar por:</label>
                 <select className="select"
                         name="order"
                         value={order}
                         onChange={ handleOptionChange} >
-                    <option>Selecciona el orden</option>
+                    <option>Selecciona el orden de los Países</option>
                     <option>Orden alfabético</option>
                     <option>Numero de población</option>
                 </select>
-                <button type="submit">
+                <button className="btn-orden" type="submit">
                     <span>Ordenar</span>
                 </button>
             </form>

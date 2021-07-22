@@ -21,18 +21,18 @@ export const FilterActivities = () => {
 
     return (
         <div>
-            <div id="myBtnContainer">
+            <div id="myBtnContainer"><h4></h4>
                 <h3 className="title-a">Actividades</h3>
                 <hr/>
-                <button className="btn-a" onClick={handleActivity1}><Link to="/Activity">Buseo</Link></button>
-                <button className="btn-a" onClick={handleActivity2}><Link to="/Activity">FlyBoard</Link></button>
-                <button className="btn-a" onClick={handleActivity3}><Link to="/Activity">JetSki</Link></button>
-                <button className="btn-a" onClick={handleActivity4}><Link to="/Activity">kayack</Link></button>
-                <button className="btn-a" onClick={handleActivity5}><Link to="/Activity">Snorkel</Link></button>
-                <button className="btn-a" onClick={handleActivity6}><Link to="/Activity">surf</Link></button>
-                <button className="btn-a" onClick={handleActivity7}><Link to="/Activity">Trekking</Link></button>
-                <button className="btn-a" onClick={handleActivity8}><Link to="/Activity">Tour</Link></button>
-                <button className="btn-a" onClick={handleActivity9}>+</button>
+                <button className="btn-a1" onClick={handleActivity1}><Link to="/Activity"><h4>Buseo</h4></Link></button>
+                <button className="btn-a" onClick={handleActivity2}><Link to="/Activity"><h4>FlyBoard</h4></Link></button>
+                <button className="btn-a" onClick={handleActivity3}><Link to="/Activity"><h4>JetSki</h4></Link></button>
+                <button className="btn-a" onClick={handleActivity4}><Link to="/Activity"><h4>kayack</h4></Link></button>
+                <button className="btn-a" onClick={handleActivity5}><Link to="/Activity"><h4>Snorkel</h4></Link></button>
+                <button className="btn-a" onClick={handleActivity6}><Link to="/Activity"><h4>surf</h4></Link></button>
+                <button className="btn-a" onClick={handleActivity7}><Link to="/Activity"><h4>Trekking</h4></Link></button>
+                <button className="btn-a" onClick={handleActivity8}><Link to="/Activity"><h4>Tour</h4></Link></button>
+                <button className="btn-a" onClick={handleActivity9}><h4>+</h4></button>
             </div>
         </div>
     )

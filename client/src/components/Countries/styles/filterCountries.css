@@ -1,4 +1,6 @@
-
+.Continentes{
+    margin-left: 20px;
+}
 .filterDiv {
     float: left;
     background-color: #2196F3;
@@ -30,12 +32,18 @@
     background-color: #f1f1f1;
     cursor: pointer;
 }
-
+.btn h4 {
+    color: black;
+    font-size:18px;
+}
 .btn:hover {
-    background-color: #ddd;
+    background-color: #04117a;
 }
 
 .btn.active {
-    background-color: dodgerblue;
+    background-color:#04117a ;
+    color: white;
+}
+.btn.active h4 {
     color: white;
 }

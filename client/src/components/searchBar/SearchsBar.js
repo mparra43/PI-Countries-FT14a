@@ -9,21 +9,22 @@ export const SearchsBar = () => {
 
     const dispatch = useDispatch();
     const [nameCountry, setNameCountry] = useState( "" );
-    const {coName} = useSelector(state=> state.countries)
+
 
     const handleSearchChange = (e) => {
         const  name =  e.target.value;
         setNameCountry(name);
     }
+    console.log(nameCountry)
 
     const handleSubmitSearch = (e) => {
-        e.preventDefault();
+       e.preventDefault();
         dispatch(findCountry(nameCountry));
     }
 
     return (
         <div className="topnav">
-            <span >Escoge el pais donde qieres viajar</span>
+            <span className="frase" >Busca el pais donde quieres viajar</span>
             <div className="search-container">
                 <form onSubmit={handleSubmitSearch}>
                     <input
@@ -33,7 +34,7 @@ export const SearchsBar = () => {
                         value ={nameCountry}
                         onChange={handleSearchChange}
                     />
-                    <button type="submit"><Link to={`/country/${coName.name}`}><CgSearch/></Link ></button>
+                    <button className="lupa" type="submit"><Link  to={`/country/${nameCountry}`}><CgSearch className="lupa"/></Link ></button>
                 </form>
             </div>
         </div>

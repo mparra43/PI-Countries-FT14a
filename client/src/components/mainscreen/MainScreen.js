@@ -6,6 +6,7 @@ import {FilterCountries} from "../Countries/FilterCountries";
 import {AllCountries} from "../Countries/AllCountries";
 import {FilterActivities} from "../activity/FilterActivities";
 import {ActivityModal} from "../activity/ActivityModal";
+import './styles/mainScreen.css';
 
 export const MainScreen = () => {
     return (
@@ -13,11 +14,10 @@ export const MainScreen = () => {
             <div>
                 <Navbar/>
             </div>
-
-            <div>
-                <FilterCountries/>
-                <SearchsBar/>
+            <FilterCountries/>
+            <div className="barra">
                 <AllCountries/>
+                <SearchsBar/>
                 <hr/>
             </div>
             <div>
