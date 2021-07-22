@@ -1,27 +1,41 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import './styles/showCountries.js.css';
-import {Country} from "./Country";
+import {findCountry} from '../../actions/countries';
 
 
 export const ShowCountries = (props) => {
 
-    const {option, showCountries, countries} = useSelector(state => state.countries);
+    const {option, showCountries, countries, coName} = useSelector(state => state.countries);
 
+    const dispatch = useDispatch();
+
+    const hadleCountry = (name) => {
+        dispatch(findCountry(name))
+    }
+console.log(coName)
     return (
         <div>
-            {!option?countries.data.map((e) =>
-                <div className="show">
+            {!option ? countries.data.map((e) =>
+                <div key={e.id} className="show">
                     <div className="card">
-                        <Link to={`/country/${e.id}`} key={e.id}> <Country  name={e.name}/></Link>
-                        <img src={e.flag} className="flag"/>
+                        <Link to={`/country/${e.id}`}>
+                            <button className="btn-country" onClick={() => {
+                                hadleCountry(e.name)
+                            }}>{e.name}</button>
+                        </Link>
+                        <img src={e.flag} alt="flag" className="flag"/>
                         <h3> {e.continent}</h3>
                     </div>
-                </div>): showCountries.map((e) =>
-                <div className="show">
-                    <div className="card">
-                        <Link to="/country" key={e.id}><h3>{e.name}</h3></Link>
+                </div>) : showCountries.map((e) =>
+                <div key={e.id} className="show">
+                    <div  className="card">
+                        <Link to={`/country/${e.id}`}>
+                            <button className="btn-country" onClick={() => {
+                                hadleCountry(e.name)
+                            }}>{e.name}</button>
+                        </Link>
                         <img src={e.flag} alt="flag" className="flag"/>
                         <h3> {e.continent}</h3>
                     </div>

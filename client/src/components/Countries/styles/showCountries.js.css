@@ -9,7 +9,12 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
 }
-.card h3{
-    align-items: center;
 
+.card h3 {
+    align-items: center;
+}
+
+.btn-country {
+    border: none;
+    background-color: white;
 }

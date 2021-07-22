@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {GiRocketFlight} from 'react-icons/gi'
 import {BiSearchAlt2} from 'react-icons/bi'
-import showcase9 from '../../img/showcase9.jpg';
+
 
 
 
@@ -18,7 +18,6 @@ export const Home = () => {
                     <BiSearchAlt2/>
                 </button>
             </div>
-            <img src={showcase9} alt="logo192" className="img"/>
             <div className="login">
                 <Link exact to="/login" >log in</Link>
             </div>
