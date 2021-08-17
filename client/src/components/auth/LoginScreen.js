@@ -1,10 +1,10 @@
 import React from 'react';
-import {GiRocketFlight, GiWorld} from 'react-icons/gi'
 import {useDispatch} from 'react-redux';
 import {useForm} from '../../hooks/useForm';
 import {startLogin, startRegister} from '../../actions/auth';
 import './login.css';
-import cottonbro from "../../img/cottonbro.jpg";
+import pokebola from "../../img/pokebola.gif";
+import pokemon from "../../img/pokemon.jpg";
 
 export const LoginScreen = () => {
 
@@ -45,13 +45,12 @@ export const LoginScreen = () => {
     return (
         <div className="container">
             <div className="bar">
-                <GiWorld className="icono"/>
-                <h1>THE ADVENTURE BEGINS</h1>
+                <img src={pokemon} alt="logo192" className="title"/>
             </div>
             <hr/>
             <div className="showcase">
                 <div>
-                    <img src={cottonbro} alt="logo192" className="img"/>
+                    <img src={pokebola} alt="logo192" className="img"/>
                 </div>
                 <div className="row">
                     <div className="form-login">
@@ -87,7 +86,7 @@ export const LoginScreen = () => {
                         </form>
                     </div>
 
-                    <div className="form-register">
+                    <div className="register">
                         <h3>Registro</h3>
                         <form onSubmit={handleRegister}>
                             <div className="form-group">

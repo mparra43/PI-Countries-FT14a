@@ -7,19 +7,16 @@ import {
 
 import {useDispatch, useSelector} from 'react-redux';
 
-import {Home} from "../components/home/home";
 import {LoginScreen} from '../components/auth/LoginScreen';
 import {MainScreen} from '../components/mainScreen/MainScreen';
-import {Country} from '../components/Countries/Country';
-import {CountryName} from '../components/Countries/CountryName';
-import {Continent} from "../components/Countries/Continente";
-import {Activity} from '../components/activity/Activity'
+import {Pokemon} from '../components/header/Pokemon';
+import {PokemonId} from '../components/Pokemons/PokemonId';
+import {WholePoke} from '../components/header/WholePoke';
 import {startChecking} from '../actions/auth';
 import {PublicRoute} from './PublicRoute';
 import {PrivateRoute} from './PrivateRoute';
-import {getCountries} from "../actions/countries";
-import {getAllCountries} from "../actions/countries";
-import {getAllActivities} from "../actions/activities";
+import {getAllPokemon, getAllTypes} from "../actions/pokemons";
+
 
 export const AppRouter = () => {
 
@@ -29,15 +26,12 @@ export const AppRouter = () => {
     useEffect(() => {
 
         dispatch(startChecking());
-
+        dispatch(getAllPokemon());
+        dispatch(getAllTypes());
     }, [dispatch])
 
     if (checking) {
-        dispatch(getCountries());
-        dispatch(getAllCountries());
-        dispatch(getAllActivities());
         return (<h5>Espere...</h5>);
-
     }
 
     return (
@@ -51,12 +45,7 @@ export const AppRouter = () => {
                         component={LoginScreen}
                         isAuthenticated={!!id}
                     />
-                    <PublicRoute
-                        exact
-                        path="/home"
-                        component={Home}
-                        isAuthenticated={!!id}
-                    />
+
 
                     <PrivateRoute
                         exact
@@ -67,27 +56,21 @@ export const AppRouter = () => {
 
                     <PrivateRoute
                         exact
-                        path="/country/:id"
-                        component={Country}
+                        path="/pokemon/show/:name"
+                        component={Pokemon}
                         isAuthenticated={!!id}
                     />
                     <PrivateRoute
                         exact
-                        path="/country/:name"
-                        component={CountryName}
+                        path="/pokemon/:name"
+                        component={Pokemon}
                         isAuthenticated={!!id}
                     />
 
                     <PrivateRoute
                         exact
-                        path="/Activity"
-                        component={Activity}
-                        isAuthenticated={!!id}
-                    />
-                    <PrivateRoute
-                        exact
-                        path="/Continent"
-                        component={Continent}
+                        path="/allPoke"
+                        component={WholePoke}
                         isAuthenticated={!!id}
                     />
 

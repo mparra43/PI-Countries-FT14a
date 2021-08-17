@@ -1,11 +1,9 @@
 import React from 'react';
 import {Navbar} from '../ui/Navbar';
-import {SearchsBar} from "../searchBar/SearchsBar";
-import {ShowCountries} from "../Countries/ShowCountries";
-import {FilterCountries} from "../Countries/FilterCountries";
-import {AllCountries} from "../Countries/AllCountries";
-import {FilterActivities} from "../activity/FilterActivities";
-import {ActivityModal} from "../activity/ActivityModal";
+import {ShowPokemon} from "../Pokemons/ShowPokemons";
+import {FilterPokemon} from "../header/FilterPokemon";
+import {OrderPokemon} from "../Pokemons/OrderPokemon";
+import {PokemonModal} from "../header/PokemonModal";
 import './styles/mainScreen.css';
 
 export const MainScreen = () => {
@@ -14,17 +12,13 @@ export const MainScreen = () => {
             <div>
                 <Navbar/>
             </div>
-            <FilterCountries/>
-            <div className="barra">
-                <AllCountries/>
-                <SearchsBar/>
-                <hr/>
-            </div>
+            <FilterPokemon/>
             <div>
-                <FilterActivities/>
+                <OrderPokemon/>
+                <hr/>
+                <ShowPokemon/>
             </div>
-            <ShowCountries/>
-            <ActivityModal/>
+            <PokemonModal/>
         </div>
     )
 }

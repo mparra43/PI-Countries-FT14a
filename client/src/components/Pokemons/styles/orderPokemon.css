@@ -1,0 +1,60 @@
+.ordenar{
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color:dimgrey;
+    margin-left: 600px;
+    margin-right: 600px;
+}
+.ordenar li {
+    float: left;
+    background-color:dimgrey;
+}
+.efecto{
+    margin: 0 675px 0 675px;
+    background-color:dimgrey;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+.poke-nombre{
+    width:205px;
+    height:80px;
+    background-color: dimgrey;
+    color:#D0D3D4;
+    margin: 0;
+    padding:0;
+}
+.bol-poke{
+    width:40px;
+    height:40px;
+    background-color:dimgrey;
+    color:#D0D3D4;
+    margin: 15px 5px 0 15px;
+    padding:0;
+
+}
+.a-z{
+    width:35px;
+    height:35px;
+    background-color: dimgrey;
+    margin: 20px 0 0 1px;
+    padding:0;
+    color:white;
+
+}
+.btn-az {
+    background-color: dimgrey;
+    border-color:transparent;
+    color:white;
+}
+.btn-az  :hover {
+    background-color: #111;
+}
+.rayo{
+    width:30px;
+    height:30px;
+    background-color:dimgrey;
+    color:#D0D3D4;
+    margin: 22px 10px 0 15px;
+    padding:0;
+}

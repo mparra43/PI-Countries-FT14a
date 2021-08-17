@@ -18,9 +18,9 @@ server.use(express.json() );
 
 // rutas
 
-server.use('/api/auth', require('./routes/auth') );
-server.use('/api', require('./routes/country') );
-server.use('/api', require('./routes/activity') );
+server.use('/pokemon/auth', require('./routes/auth') );
+server.use('/pokemon', require('./routes/pokemon') );
+
 
 
 

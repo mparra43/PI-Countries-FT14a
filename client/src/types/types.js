@@ -13,16 +13,15 @@ export const types = {
     authLogout: '[auth] Logout',
 
 
-    getCountriesAll:'[countries] get all countries',
-    getCountriesName:'[countries] get name country',
-    getCountriesId:'[countries] get id countries',
-    getCountries:'[countries] get countries 10',
-    orderCountries: '[countries] order Countries',
-    filterCountries: '[countries] filter Countries',
-    findCountry:'[countries] find Country ',
-
-
-    getActivities: '[activities] get all activities',
-    postActivities: '[activities] get all activities',
-    filterActivities: '[activities] filter activities',
+    getPokemonAll:'[pokemon] get all pokemon',
+    getPokemonId:'[pokemon] get id pokemon',
+    getPokemon:'[pokemon] get countries name',
+    orderPokemon: '[pokemon] order pokemon',
+    orderPowerPokemon: '[pokemon] order power pokemon',
+    findPokemon:'[pokemon] find name pokemon ',
+    findApiPokemon:'[pokemon] find name pokemon ',
+    filterPokemon: '[pokemon] filter pokemon',
+    filterTypePokemon: '[pokemon] filter pokemon',
+    postPokemon: '[pokemon] create pokemon',
+    getTypes: '[pokemon] get all types ',
 }

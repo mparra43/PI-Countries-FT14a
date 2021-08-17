@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import {GiRocketFlight} from 'react-icons/gi'
-import {BiSearchAlt2} from 'react-icons/bi'
+import {SiPokemon} from 'react-icons/si'
+import {CgPokemon} from 'react-icons/cg'
 
 
 
@@ -11,12 +11,9 @@ export const Home = () => {
         <div className="home">
             <div className="nav-home">
                 <div className="img">
-                    <GiRocketFlight/>
-                    <h1>THE ADVENTURE BEGINS</h1>
+                    <CgPokemon/>
+                    <SiPokemon/>
                 </div>
-                <button>
-                    <BiSearchAlt2/>
-                </button>
             </div>
             <div className="login">
                 <Link exact to="/login" >log in</Link>

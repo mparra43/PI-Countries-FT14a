@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { CountriesApp } from './CountriesApp';
+import {PokemonApp} from './PokemonsApp';
 import './styles.css';
 
 ReactDOM.render(
-    <CountriesApp />,
+    <PokemonApp/>,
   document.getElementById('root')
 );

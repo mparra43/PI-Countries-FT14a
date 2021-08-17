@@ -1,0 +1,100 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    margin: 60px 25px 0 25px;
+    background-color:#2F3031;
+    -webkit-border-top-left-radius: 15px;
+    -webkit-border-top-right-radius: 15px;
+}
+li {
+    float: left;
+}
+.lupa{
+    width:25px;
+    height:25px;
+    background-color: #2F3031;
+    color:#D0D3D4;
+}
+.li button{
+
+    border-color:transparent;
+    margin-top:12px;
+    margin-left: 0;
+}
+.li {
+    float: left;
+    padding:3px;
+}
+.li-s{
+    color:#D0D3D4;
+    float: left;
+    padding:5px;
+    margin:15px 5px 0 800px;
+    font-size:19px;
+}
+.li-input{
+    color:#D0D3D4;
+    float: left;
+    padding:5px;
+    margin:10px 5px 0 5px;
+}
+.log-bol{
+    width:35px;
+    height:35px;
+}
+.btn-i{
+    margin-left: 5px;
+    border-color:transparent;
+    -webkit-border-top-left-radius: 15px;
+    color:#D0D3D4;
+    background-color: #2F3031;
+    height:60px;
+}
+
+.btn-pk{
+    border: none;
+    color:#D0D3D4;
+    width: 80px;
+    padding:1px;
+    height:60px;
+    text-align: center;
+    background-color: #2F3031 ;
+    font-size:16px;
+}
+
+.btn-fi{
+    border: none;
+    color:#D0D3D4;
+    width: 160px;
+    padding:1px;
+    height:60px;
+    text-align: center;
+    background-color: #2F3031 ;
+    font-size:16px;
+}
+
+.btn-fg{
+    border-color:transparent;
+    -webkit-border-top-right-radius: 15px;
+    color:#D0D3D4;
+    background-color: #2F3031;
+    height:60px;
+    font-size:16px;
+}
+.btn-bc{
+    margin-left:750px;
+    height:60px;
+}
+.bc{
+    margin-top: 0;
+    list-style-type: none;
+    overflow: hidden;
+    float: left;
+}
+.btn-lupa{
+    background-color: #2F3031;
+}
+.btn  :hover {
+    background-color: #111;
+}

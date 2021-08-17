@@ -1,22 +1,36 @@
-.bar{
-    display:flex;
+.bar {
+    display: flex;
 }
-.icono{
-    width:50px;
-    height:50px;
+
+.title {
+    width: 650px;
+    height: 100px;
+    position: center;
+    margin: 20px 0 0 20px;
 }
-.img{
-    width:600px;
-    height:600px;
-    margin: 20px 30px 0 8px;
+
+.img {
+    width: 600px;
+    height: 600px;
+    margin: 2px 30px 0 8px;
 }
-.showcase{
-    display:flex;
+input {
+    width: 100%;
+    padding: 4px 5px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.showcase {
+    display: flex;
 }
 
 .form-login {
+    width: 500px;
     margin-left: 10px;
-    margin-top:30px;
+    margin-top: 30px;
     border-radius: 5px;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     padding: 5%;
@@ -27,19 +41,19 @@
     color: #333;
 }
 
-.form-register {
-    margin-left: 10px;
-    height:350px;
+.register {
+    background-color: #E74C3C;
+    box-shadow: 0 5px 8px 0, 0 9px 26px 0;
     border-radius: 5px;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
-    padding: 5%;
-    background: #04117a;
+    width: 500px;
+    padding: 30px;
+    margin: 10px;
 
 }
 
-.form-register h3 {
+.register h3 {
     text-align: center;
-    color: #fff;
+    color: #333;
 }
 
 .login-container form {
@@ -56,13 +70,13 @@
 
 .form-login .btnSubmit {
     color: #fff;
-    background-color: #04117a;
+    background-color:  #424949 ;
 }
 
 .form-register .btnSubmit {
-    width: 50%;
     background-color: #fff;
-    color: #04117a;
+    color:#566573 ;
+    text-align: center;
 }
 
 
