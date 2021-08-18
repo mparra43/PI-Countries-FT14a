@@ -19,11 +19,7 @@ export const pokemonReducer = (state = initialState, action) => {
 
         case types.getPokemonAll:
             console.log(action.payload)
-            let showPokes = action.payload.data.map((e) => (
-                {
-                    ...e, type: e.type.split(",")
-                }
-            ))
+            let showPokes = action.payload.data.map((e) => ({...e, type: e.type.split(",")}))
             return {
                 ...state,
                 pokeApi: action.payload.pokemonApi,
@@ -71,11 +67,11 @@ export const pokemonReducer = (state = initialState, action) => {
 
         case types.postPokemon:
             console.log(action.payload)
-            let array = [...state.pokeBd, action.payload]
-            console.log(array)
+            let pokesShow = action.payload.data.map((e) => ({...e, type: e.type.split(",")}))
             return {
                 ...state,
-                pokeBd:array
+                pokeBd: action.payload.pokemonBd,
+                showPokemon: pokesShow,
             }
 
 

@@ -48,6 +48,7 @@ const fetchPokeParameter = async (parameter) => {
         const response = await fetch(url);
         const data = await response.json();
         let {id, name, stats, height, weight, sprites, types} = data;
+        let tipos =  types.length < 2 ? [types[0].type.name] : [types[0].type.name, types[1].type.name]
         return {
             id,
             name,
@@ -58,7 +59,7 @@ const fetchPokeParameter = async (parameter) => {
             height,
             weight,
             picture: sprites.other.dream_world.front_default,
-            types: types.length < 2 ? [types[0].type.name] : [types[0].type.name, types[1].type.name],
+            type: tipos.toString()
         };
     } catch (error) {
         return error;

@@ -20,7 +20,7 @@ router.get('/', validateJwt, pokemonName);
 router.post('/addPokemon',
     [// middleware de express validator
         check('name', 'El nombre es obligatorio').not().isEmpty(),
-        check('lives', 'EL numero de vidas debe ser de 1 a 9').isLength({max: 1}),
+        check('lives', 'EL numero de vidas debe ser de 1 a 99').isLength({max: 2}),
         check('attack', 'El ataque es obligatorio').not().isEmpty(),
         check('defense', 'la defensa  es obligatoria').not().isEmpty(),
         check('speed', 'la velocidad  es obligatoria').not().isEmpty(),

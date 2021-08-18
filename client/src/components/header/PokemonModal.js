@@ -6,19 +6,11 @@ import Modal from 'react-modal';
 import Select from 'react-select';
 import {uiCloseModal} from '../../actions/ui';
 import {savePokemon} from "../../actions/pokemons";
-import {t} from "react-select/dist/index-4bd03571.esm";
 
 
-const customStyles = {
-    content: {
-        top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
-    }
-};
+
+
+
 Modal.setAppElement('#root');
 
 

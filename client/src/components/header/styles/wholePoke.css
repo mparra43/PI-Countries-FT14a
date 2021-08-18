@@ -1,4 +1,31 @@
+.list h1 {
+  margin-left:45px;
+}
 .img-whole{
-    width:80px;
-    height:80px;
+    width: 90px;
+    height: 90px;
+}
+
+.table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 40px;
+}
+
+.table td, .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+.table tr:hover {background-color: #ddd;}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:#C0392B;
+    color: white;
 }

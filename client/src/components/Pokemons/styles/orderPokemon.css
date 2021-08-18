@@ -3,15 +3,14 @@
     padding: 0;
     overflow: hidden;
     background-color:dimgrey;
-    margin-left: 600px;
-    margin-right: 600px;
+    margin: 90px 600px 0 600px;
+    -webkit-border-radius: 12px;
 }
 .ordenar li {
     float: left;
     background-color:dimgrey;
 }
 .efecto{
-    margin: 0 675px 0 675px;
     background-color:dimgrey;
     -webkit-border-bottom-left-radius: 8px;
     -webkit-border-bottom-right-radius: 8px;
@@ -20,7 +19,7 @@
     width:205px;
     height:80px;
     background-color: dimgrey;
-    color:#D0D3D4;
+    color:#ECF0F1 ;
     margin: 0;
     padding:0;
 }
@@ -28,7 +27,7 @@
     width:40px;
     height:40px;
     background-color:dimgrey;
-    color:#D0D3D4;
+    color:#ECF0F1 ;
     margin: 15px 5px 0 15px;
     padding:0;
 
@@ -39,13 +38,13 @@
     background-color: dimgrey;
     margin: 20px 0 0 1px;
     padding:0;
-    color:white;
+    color:#ECF0F1 ;
 
 }
 .btn-az {
     background-color: dimgrey;
     border-color:transparent;
-    color:white;
+    color:#ECF0F1 ;
 }
 .btn-az  :hover {
     background-color: #111;
@@ -54,7 +53,7 @@
     width:30px;
     height:30px;
     background-color:dimgrey;
-    color:#D0D3D4;
+    color:#ECF0F1 ;
     margin: 22px 10px 0 15px;
     padding:0;
 }

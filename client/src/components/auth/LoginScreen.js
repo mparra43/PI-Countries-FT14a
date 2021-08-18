@@ -45,7 +45,7 @@ export const LoginScreen = () => {
     return (
         <div className="container">
             <div className="bar">
-                <img src={pokemon} alt="logo192" className="title"/>
+                <img src={pokemon} alt="logo" className="title"/>
             </div>
             <hr/>
             <div className="showcase">

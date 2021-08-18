@@ -1,13 +1,13 @@
-ul {
+.ul-filter {
     list-style-type: none;
     padding: 0;
     overflow: hidden;
-    margin: 60px 25px 0 25px;
+    margin: 60px 35px 30px 35px;
     background-color:#2F3031;
     -webkit-border-top-left-radius: 15px;
     -webkit-border-top-right-radius: 15px;
 }
-li {
+.ul-filter li {
     float: left;
 }
 .lupa{
@@ -30,7 +30,7 @@ li {
     color:#D0D3D4;
     float: left;
     padding:5px;
-    margin:15px 5px 0 800px;
+    margin:15px 5px 0 970px;
     font-size:19px;
 }
 .li-input{

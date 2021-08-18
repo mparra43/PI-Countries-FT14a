@@ -31,7 +31,7 @@ export const FilterPokemon = () => {
     return (
 
         <div>
-            <ul>
+            <ul className="ul-filter">
                 <li className="btn"><Link to="/main">
                         <button className="btn-i" ><CgPokemon className="log-bol"/></button>
                     </Link></li>

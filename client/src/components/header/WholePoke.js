@@ -9,31 +9,23 @@ export const WholePoke = () => {
     console.log(pokemonFilter)
 
     return (
-        <div>
+        <div className="list">
             <h1>List of Pokémons</h1>
             <hr/>
             <table className="table">
-                <thead>
                 <tr>
                     <th>Id</th>
                     <th>Pokémon</th>
                     <th>Name</th>
                 </tr>
-                </thead>
-            </table>
-            <tbody>
             {pokemonFilter.map((e) =>(
             <tr key={e.id}>
-                <tr>
-                    <Link to={`/pokemon/${e.id}`}><button>{e.id}</button></Link></tr>
-                <tr>
-                    <img className="img-whole" src={e.picture} alt={e.name}/>
-                </tr>
-                <tr>{e.name}</tr>
-                <tr>{e.type}</tr>
+                <td key={e.id}><Link to={`/pokemon/${e.id}`}><button>{e.id}</button></Link></td>
+                <td><img className="img-whole" src={e.picture} alt={e.name}/></td>
+                <td>{e.name}</td>
             </tr>
             ))}
-            </tbody>
+            </table>
         </div>
     )
 }

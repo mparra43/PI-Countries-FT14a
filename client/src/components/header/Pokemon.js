@@ -1,12 +1,11 @@
 import React from 'react'
 import {useSelector} from "react-redux";
-
+import './styles/pokemons .css';
+import bolpoke from "../../img/bolpoke.png";
 
 export const Pokemon = () => {
 
     const {pokeName} = useSelector(state => state.pokemon);
-
-
 
 
     return (
@@ -14,22 +13,25 @@ export const Pokemon = () => {
             <div className="detail-card">
                 <div><img src={pokeName.picture} alt="flag" className="card-img"/></div>
 
-                <div>
-                    <h3>{pokeName.id}</h3><h1>{pokeName.name}</h1>
+                <div className="card-information">
+                    <h1><img src={bolpoke} alt="logo" className="bol-card"/> N.{pokeName.id} {pokeName.name}</h1>
                     <hr/>
-                    <h3> Vidas:{pokeName.lives}</h3>
-                    <h3> Ataque :{pokeName.attack}</h3>
-                    <h3> Defensa :{pokeName.defense}</h3>
-                    <h3> Velocidad:{pokeName.speed}</h3>
-                    <h4> Altura: {pokeName.height}</h4>
-                    <h4> peso:{pokeName.weight}</h4>
-                    <h4> types</h4>
-                    {pokeName.type.map((e) => (
-                        <h3 key={e}>{e}</h3>
-                    ))
-                    }
+                    <div className="card-ul">
+                        <ul className="info-poke-card">
+                            <li>Lives:{pokeName.lives}</li>
+                            <li>Attack :{pokeName.attack}</li>
+                            <li>Defense :{pokeName.defense}</li>
+                            <li> Speed:{pokeName.speed}</li>
+                        </ul>
+                        <ul className="info-poke-card1">
+                            <li> height: {pokeName.height}</li>
+                            <li> weight:{pokeName.weight}</li>
+                            <div>
+                                <li> types:{pokeName.type}</li>
+                            </div>
+                        </ul>
+                    </div>
                 </div>
-
             </div>
         </div>
     )
